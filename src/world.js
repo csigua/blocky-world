@@ -641,13 +641,6 @@ function click(ev) {
   // Extract event click and return it in WebGL coordinates
   let [x,y] = convertCoordinatesEventToGL(ev);
 
-  // rotate canvas
-  // if (g_mouseOrigin[0] - x < 0) {
-  //   g_camera.mouse_pan_right(1);
-  // }
-  // else if (g_mouseOrigin[0] - x > 0) {
-  //   g_camera.mouse_pan_left(1);
-  // }
   g_camera.mouse_pan_horizontal((g_mouseOrigin[0] - x)*50);
   g_camera.mouse_pan_vertical((g_mouseOrigin[1] - y)*25);
 
